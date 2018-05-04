@@ -105,6 +105,11 @@ def insert_node(root, key):
 
     return root
 
+def delete_node(root, key):
+
+    if not contains(root, key):
+        return root
+
 
 def pre_order(root):
     if root is None:
@@ -239,9 +244,8 @@ def main():
 
     root = insert_node(root, 7)
 
-    for i in range(16):
+    for i in range(32):
         rand = random.randint(1, 100)
-        print('inserting ', rand)
         root = insert_node(root, rand)
 
     levels = get_levels(root)
