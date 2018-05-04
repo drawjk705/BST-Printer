@@ -1,4 +1,3 @@
-from pprint import pprint
 import random
 import math
 
@@ -12,14 +11,19 @@ class Node(object):
         self.right = None
         self.height = 1
 
-    def get_balance(self):
-        return height(self.left) - height(self.right)
-
     def __str__(self):
         return str(self.key)
 
     def __repr__(self):
         return str(self.key)
+
+
+def get_balance(node):
+
+    if node is None:
+        return 0
+
+    return height(node.left) - height(node.right)
 
 
 def height(node):
@@ -81,7 +85,7 @@ def insert_node(root, key):
 
     root.height = 1 + max(height(root.left), height(root.right))
 
-    balance = root.get_balance()
+    balance = get_balance(root)
 
     if balance > 1:
         if key < root.left.key:
@@ -105,10 +109,74 @@ def insert_node(root, key):
 
     return root
 
+
+def max_left(root):
+    if root is None:
+        return None
+    if root.right is None:
+        return root
+    return max_left(root.right)
+
+
+def min_right(root):
+    if root.left is None:
+        return root
+    return min_right(root.left)
+
+
 def delete_node(root, key):
 
     if not contains(root, key):
         return root
+
+    if key > root.key:
+        root.right = delete_node(root.right, key)
+    elif key < root.key:
+        root.left = delete_node(root.left, key)
+    else:
+        to_swap = max_left(root.left)
+        if to_swap is None:
+            to_swap = min_right(root.right)
+            # will only have right children,
+            # since nothing else can be lesser
+            root.right = to_swap.right
+        else:
+            # will only have left children,
+            # since nothing else can be greater
+            root.left = to_swap.left
+        if to_swap is None:
+            # delete self
+            root = None
+        else:
+            root.key = to_swap.key
+            # delete self now
+            to_swap = None
+
+    if root is None:
+        return root
+
+    root.height = 1 + max(height(root.left), height(root.right))
+
+    balance = get_balance(root)
+
+    if balance > 1:
+        if get_balance(root.left) >= 0:
+            root.left = left_rotate(root.left)
+            return right_rotate(root)
+
+        elif get_balance(root.left) < 0:
+            return right_rotate(root)
+
+    elif balance < -1:
+
+        if get_balance(root.right) > 0:
+            root.right = right_rotate(root.right)
+            return left_rotate(root)
+
+        elif get_balance(root.right) <= 0:
+            return left_rotate(root)
+
+    return root
 
 
 def pre_order(root):
@@ -183,7 +251,7 @@ def print_tree(root, levels, index=0):
         dist_from_side -= 1
         print(' ' * dist_from_side, end='')
 
-        dash_count = math.floor(space_bw_slash_sibs / 2)
+        dash_count = int(math.floor(space_bw_slash_sibs / 2))
 
         for node in levels[index]:
             if node is not None:
