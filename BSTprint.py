@@ -208,9 +208,6 @@ def get_levels(root):
             queue.append(None)
             queue.append(None)
 
-    for i in levels:
-        print(i)
-
     return levels
 
 
@@ -308,35 +305,36 @@ def print_tree(root, levels, index=0):
 
 
 def main():
-    root = insert_node(None, 6)
+    root = None
 
-    root = insert_node(root, 7)
 
-    for i in range(32):
-        rand = random.randint(1, 100)
-        root = insert_node(root, rand)
+    while True:
+        print('Enter d to delete a node, i to insert a node, and q to quit:')
+        usrin = input()
 
-    levels = get_levels(root)
+        if usrin == 'd':
+            if root is not None:
+                key = input('Enter the key of the node to delete:')
+                try:
+                    key = int(key)
+                    root = delete_node(root, key)
+                except:
+                    print('Please enter a number')
+            else:
+                print('\tCannot delete from empty tree:')
+        if usrin == 'i':
+            key = input('Enter the key of the node to insert:')
+            try:
+                key = int(key)
+                root = insert_node(root, key)
+            except:
+                print('Please enter a number')
+        if usrin == 'q':
+            break
 
-    print_tree(root, levels)
-
-    # root = insert_node(root, 49)
-
-    # root = insert_node(root, 23)
-
-    # root = insert_node(root, 2)
-
-    # root = insert_node(root, 9)
-
-    # root = insert_node(root, 13)
-
-    # root = insert_node(root, 1)
-
-    # pre_order(root)
-
-    # levels = get_levels(root)
-
-    # print_tree(root, levels)
+        if root is not None:
+            print("Here's your tree: ")
+            print_tree(root, get_levels(root))
 
 
 if __name__ == '__main__':
