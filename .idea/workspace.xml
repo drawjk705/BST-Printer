@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b145b498-80f3-43c7-aef0-4228e038404e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/BSTprint.py" beforeDir="false" afterPath="$PROJECT_DIR$/BSTprint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +16,8 @@
       <file leaf-file-name="BSTprint.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BSTprint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
-              <caret line="328" column="45" lean-forward="true" selection-start-line="328" selection-start-column="45" selection-end-line="328" selection-end-column="45" />
-              <folding>
-                <element signature="e#1#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="13942">
+              <caret line="328" column="45" selection-start-line="328" selection-start-column="45" selection-end-line="328" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -60,6 +57,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -71,7 +69,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -129,16 +126,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="94" y="43" width="3106" height="1757" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.04990341" />
       <window_info anchor="bottom" id="TODO" order="9" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="2" />
-      <window_info active="true" anchor="right" id="Run" order="3" visible="true" weight="0.46619445" />
+      <window_info anchor="right" id="Run" order="3" weight="0.46619445" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32978722" />
+      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.32978722" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -161,21 +157,36 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/BSTprint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10890">
-          <caret line="242" column="37" selection-start-line="242" selection-start-column="37" selection-end-line="242" selection-end-column="37" />
-          <folding>
-            <element signature="e#1#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="16750">
+          <caret line="335" column="39" lean-forward="true" selection-start-line="335" selection-start-column="39" selection-end-line="335" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BSTprint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
+        <state relative-caret-position="16400">
+          <caret line="328" column="45" selection-start-line="328" selection-start-column="45" selection-end-line="328" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BSTprint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16400">
           <caret line="328" column="45" lean-forward="true" selection-start-line="328" selection-start-column="45" selection-end-line="328" selection-end-column="45" />
-          <folding>
-            <element signature="e#1#14#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BSTprint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10890">
+          <caret line="242" column="37" selection-start-line="242" selection-start-column="37" selection-end-line="242" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BSTprint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13942">
+          <caret line="328" column="45" selection-start-line="328" selection-start-column="45" selection-end-line="328" selection-end-column="45" />
         </state>
       </provider>
     </entry>
